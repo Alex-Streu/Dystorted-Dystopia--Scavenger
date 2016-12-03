@@ -10,6 +10,6 @@ retracting = false;
 pulling = false;
 
 // Handle chain
-max_length = 96;
+max_length = 112;
 chain_length = 0;
 time_active = 0;

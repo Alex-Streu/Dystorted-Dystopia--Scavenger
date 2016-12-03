@@ -1,8 +1,11 @@
 ///dash_state()
+state_string = "Dash";
 
-// Set alarm
-if (alarm_get(alarm_dash) <= 0) {
-	alarm_set(alarm_reset_dash, room_speed*2);
+// Alarms
+alarm[alarm_dash]--;
+if (alarm[alarm_dash] <= 0) {
+	alarm[alarm_dash] = -1;
+	alarm[alarm_reset_dash] = 90;
 	boots_charged = false;
 	state = move_state;
 	change_sprite_indexes();
@@ -11,6 +14,7 @@ if (alarm_get(alarm_dash) <= 0) {
 // Handle vertical movement and sprites if horizontal dash
 if (dashing_state != dash_up) {
 	if (!place_meeting(x, y+1, Solid)) {	
+		vspd += grav;
 	
 		// Player is in the air
 		sprite_index = idle_sprite;

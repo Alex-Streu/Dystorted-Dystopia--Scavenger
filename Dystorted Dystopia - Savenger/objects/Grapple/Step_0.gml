@@ -1,13 +1,9 @@
 /// @description Check state
 time_active += 1/room_speed;
 
-// Safety retract and finish
-if (time_active > 1) {
+// Safety retract
+if (time_active > 1.5 && !pulling) {
 	retracting = true;
-	pulling = false;
-}
-if (time_active > 1.2) {
-	finished = true;
 }
 
 if (instance_exists(Zane)) {
@@ -56,8 +52,9 @@ if (instance_exists(Zane)) {
 		with (Zane) {
 			hspd = floor(other.pull_spd * lengthdir_x(1, point_direction(x, y, other.x, other.y)));
 			vspd = floor(other.pull_spd * lengthdir_y(1, point_direction(x, y, other.x, other.y)));
-			if (place_meeting(x + hspd, y + vspd, other) || place_meeting(x + hspd/2, y + vspd/2, other)) {
-				other.finished = true;
+			if (place_meeting(x, y, other)) {
+				hspd = 0;
+				vspd = 0;
 			}
 		}
 	}

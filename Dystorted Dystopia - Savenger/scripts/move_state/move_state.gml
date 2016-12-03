@@ -1,4 +1,5 @@
 /// move_state()
+state_string = "Move";
 
 // Handle vertical movement and sprites
 if (!place_meeting(x, y+1, Solid)) {	
@@ -57,8 +58,5 @@ if (left_action || up_action) {
 }
 	
 // Handle dash
-if (alarm[alarm_reset_dash] == -1 && !boots_charged) {
-	boots_charged = true;
-	change_sprite_indexes();
-}
+reset_dash();
 dash();

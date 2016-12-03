@@ -1,4 +1,6 @@
 ///attack_state()
+state_string = "Attack";
+
 var finished = false;
 
 // Handle momentum
@@ -15,7 +17,9 @@ move(Solid);
 switch (weapon_state) {
 	case prog_grapple:
 		if (left_action || up_action) finished = true;
-		if (instance_exists(weapon) && weapon.finished) finished = true;
+		if (instance_exists(weapon)) {
+			finished = weapon.finished;
+		} else finished = true;
 		
 		if (finished) {
 			if (instance_exists(weapon)) instance_destroy(weapon);
@@ -26,3 +30,5 @@ switch (weapon_state) {
 		state = move_state;
 		break;
 }
+
+reset_dash();

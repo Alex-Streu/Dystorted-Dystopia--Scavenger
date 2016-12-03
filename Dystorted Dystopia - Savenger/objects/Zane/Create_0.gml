@@ -7,12 +7,17 @@ vspd = 0;
 grav = 1;
 jmp = -10;
 jmp_ctrl = -4;
-hspd_dash = 14;
-vspd_dash = -10;
 vspd_dmg = -12;
 hspd_dmg = 6;
 audio_em = audio_emitter_create();
 weapon = pointer_null;
+debug_on = false;
+
+// Input variables ---- move later
+right_pressed = false;
+left_pressed = false;
+was_right = false;
+was_left = false;
 
 // Setup combo variables
 prog_combo = "";
@@ -33,13 +38,15 @@ dash_up = "UU";
 dash_left = "LL";
 dash_right = "RR";
 dash_last_two = "";
+hspd_dash = 14;
+vspd_dash = -8;
+
 
 // Player states
 state = move_state;
 weapon_state = prog_normal;
 
 // Player alarms
-alarm_count = 2;
 alarm_dash = 0;
 alarm_reset_dash = 1;
 

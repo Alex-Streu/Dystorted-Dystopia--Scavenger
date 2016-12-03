@@ -1,4 +1,4 @@
-///dash(dash_last_two)
+///dash()
 var set_dash = false;
 
 if (!unlocked_boots || !boots_charged)
@@ -24,6 +24,6 @@ switch(dash_last_two) {
 
 if (set_dash) {
 	dashing_state = dash_last_two;
-	alarm_set(alarm_dash, room_speed/6);
+	alarm[alarm_dash] = 8;
 	state = dash_state;
 }

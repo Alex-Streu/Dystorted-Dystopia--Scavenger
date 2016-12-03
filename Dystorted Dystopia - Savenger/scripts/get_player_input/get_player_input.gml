@@ -5,6 +5,8 @@ get_input();
 programming = keyboard_check(vk_rshift);
 
 // Override controls for gamepad
+var gp_id = 0;
+
 if (gamepad_is_connected(0)) {
 	
 	// Check if programming
@@ -56,3 +58,4 @@ if (dash_time_total >= dash_time_removal) {
 
 length = string_length(dash_combo);
 dash_last_two = string_copy(dash_combo, length-2+1, 2);
+
