@@ -49,7 +49,7 @@ if (hspd != 0) {
 move(Solid);
 
 // Handle weapon switching
-switch_weapon(prog_last_three);
+switch_weapon();
 	
 // Handle actions
 if (left_action || up_action) {
@@ -57,6 +57,8 @@ if (left_action || up_action) {
 }
 	
 // Handle dash
-if (dash_up || dash_left || dash_right) {
-	dash();
+if (alarm[alarm_reset_dash] == -1 && !boots_charged) {
+	boots_charged = true;
+	change_sprite_indexes();
 }
+dash();

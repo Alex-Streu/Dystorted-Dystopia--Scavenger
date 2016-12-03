@@ -1,7 +1,7 @@
 {
     "id": "6d716a53-dc13-4f4c-b295-a03ed398c1a3",
     "modelName": "GMSprite",
-    "mvc": "1.0",
+    "mvc": "1.1",
     "name": "spr_zane_full_normal_idle",
     "For3D": false,
     "HTile": false,

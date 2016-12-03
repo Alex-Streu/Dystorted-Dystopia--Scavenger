@@ -1,8 +1,7 @@
-///switch_weapon(weapon)
-var weapon = argument0;
+///switch_weapon()
 var set_weapon = false;
 
-switch(weapon) {
+switch(prog_last_three) {
 	case prog_normal:
 		set_weapon = true;
 		break;
@@ -15,7 +14,7 @@ switch(weapon) {
 }
 
 if (set_weapon) {
-	weapon_state = weapon;
+	weapon_state = prog_last_three;
 	reset_prog();
 	change_sprite_indexes();
 }

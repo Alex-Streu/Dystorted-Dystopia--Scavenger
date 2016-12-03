@@ -2,13 +2,13 @@
 // Player variables
 spd = 5;
 acc = 1;
-drag = 1;
 hspd = 0;
 vspd = 0;
 grav = 1;
 jmp = -10;
 jmp_ctrl = -4;
-spd_dash = 14;
+hspd_dash = 14;
+vspd_dash = -10;
 vspd_dmg = -12;
 hspd_dmg = 6;
 audio_em = audio_emitter_create();
@@ -24,17 +24,28 @@ prog_sword = "LLL";
 prog_grapple = "LUR";
 prog_last_three = "";
 
+// Setup dash variables
+dash_combo = "";
+dash_time_step = 1/room_speed;
+dash_time_removal = 1/4;
+dash_time_total = 0;
+dash_up = "UU";
+dash_left = "LL";
+dash_right = "RR";
+dash_last_two = "";
+
 // Player states
 state = move_state;
 weapon_state = prog_normal;
 
 // Player alarms
+alarm_count = 2;
 alarm_dash = 0;
 alarm_reset_dash = 1;
 
 // Player unlockables
 unlocked_sword = true;
-unlocked_grapple = false;
+unlocked_grapple = true;
 unlocked_boots = true;
 boots_charged = true;
 

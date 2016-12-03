@@ -1,7 +1,7 @@
 {
     "id": "a6bec5f4-07ee-4601-bf01-f33982b294c3",
     "modelName": "GMSprite",
-    "mvc": "1.0",
+    "mvc": "1.1",
     "name": "spr_zane_empty_grapple_idle",
     "For3D": false,
     "HTile": false,

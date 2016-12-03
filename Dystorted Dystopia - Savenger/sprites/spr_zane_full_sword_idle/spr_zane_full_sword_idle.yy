@@ -1,7 +1,7 @@
 {
     "id": "e22440df-03ac-4adc-8a2e-8eac511ed0e2",
     "modelName": "GMSprite",
-    "mvc": "1.0",
+    "mvc": "1.1",
     "name": "spr_zane_full_sword_idle",
     "For3D": false,
     "HTile": false,

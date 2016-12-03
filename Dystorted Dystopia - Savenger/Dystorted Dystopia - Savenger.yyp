@@ -699,7 +699,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\get_input\\get_input.yy",
+                "resourcePath": "scripts\\get_player_input\\get_player_input.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1196,6 +1196,25 @@
                 "resourcePath": "scripts\\change_sprite_indexes\\change_sprite_indexes.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "17eda775-2f6b-4510-acaa-39d8dd18ef41",
+            "Value": {
+                "id": "793d7b4f-4353-41dc-b93c-6532e5aceafc",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\get_input\\get_input.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
@@ -1205,6 +1224,7 @@
         "f8da23fa-eec6-4ce9-9a68-b22017285254",
         "911c4256-cd00-46c1-9670-8761d35d053d",
         "8f8eef11-ecae-43a2-b1d7-4e287f3fd6ed",
+        "17eda775-2f6b-4510-acaa-39d8dd18ef41",
         "0df58043-691b-46ef-8f10-16128ba91b52",
         "84b18b30-7f0d-48c2-b928-d60663f96d87",
         "de7ad8a4-4569-4f07-a0db-e75a5077e342",

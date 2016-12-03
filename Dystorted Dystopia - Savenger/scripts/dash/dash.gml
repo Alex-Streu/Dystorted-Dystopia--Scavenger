@@ -1,17 +1,29 @@
-///dash()
+///dash(dash_last_two)
+var set_dash = false;
 
 if (!unlocked_boots || !boots_charged)
 	return;
-	
-if (dash_up) {
-	vspd = -spd_dash;
-	hspd = 0;
-} else {
-	vspd = 0;
-	if (dash_left) hspd = -spd_dash;
-	else if (dash_right) hspd = spd_dash;
+
+switch(dash_last_two) {
+	case dash_up:
+		vspd = vspd_dash;
+		hspd = 0;
+		set_dash = true;
+		break;
+	case dash_left:
+		vspd = 0;
+		hspd = -hspd_dash;
+		set_dash = true;
+		break;
+	case dash_right:
+		vspd = 0;
+		hspd = hspd_dash;
+		set_dash = true;
+		break;
 }
 
-alarm[alarm_dash] = 5;
-boots_charged = false;
-state = dash_state;
+if (set_dash) {
+	dashing_state = dash_last_two;
+	alarm_set(alarm_dash, room_speed/6);
+	state = dash_state;
+}
